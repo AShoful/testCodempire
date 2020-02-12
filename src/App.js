@@ -43,7 +43,7 @@ function App() {
     <Rezults quiz = {quizes} 
       isDisabled={true}
       answers={answers}/>
-
+  
   return  <Box className='App'>
     <Switch>
       <Route path="/" exact render={() => appQuiz} />

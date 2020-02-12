@@ -14,7 +14,8 @@ export function renderUIComponents({item, i, handleSetAnswer, arrAnswers, rightA
     <Typography variant={'subtitle1'} 
       color={check[i] ? 'primary' : 'secondary'}
       style={{paddingLeft: 10}}> 
-      Правильный ответ {rightAnswers[i+1].toString()}. Вы ответили {check[i] ? 'правильно' : 'неправильно'} 
+      Правильный ответ "{Object.values(rightAnswers)[i].toString()}". 
+      Вы ответили {check[i] ? 'правильно' : 'неправильно'} 
     </Typography> 
     : null;
 
