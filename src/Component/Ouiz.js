@@ -48,7 +48,7 @@ function Quiz({quiz, handleSetAnswer, answers, isDisabled}) {
       message={() => 
         `Вы не оветили, или не сохранили ответы на 
         ${arrNoAnswers.toString()} вопросы. Продолжить?`}
-      /> }
+      /> 
     </Box>
 }
 
