@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/AShoful/testCodempire/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/AShoful/testCodempire/static/js/main.34a699b9.chunk.js",
-    "main.js.map": "/AShoful/testCodempire/static/js/main.34a699b9.chunk.js.map",
-    "runtime-main.js": "/AShoful/testCodempire/static/js/runtime-main.135f4ad9.js",
-    "runtime-main.js.map": "/AShoful/testCodempire/static/js/runtime-main.135f4ad9.js.map",
-    "static/js/2.2ac75d1e.chunk.js": "/AShoful/testCodempire/static/js/2.2ac75d1e.chunk.js",
-    "static/js/2.2ac75d1e.chunk.js.map": "/AShoful/testCodempire/static/js/2.2ac75d1e.chunk.js.map",
-    "index.html": "/AShoful/testCodempire/index.html",
-    "precache-manifest.d83883c81d558ee74b0b88dc2957c5ef.js": "/AShoful/testCodempire/precache-manifest.d83883c81d558ee74b0b88dc2957c5ef.js",
-    "service-worker.js": "/AShoful/testCodempire/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/AShoful/testCodempire/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.2ac75d1e.chunk.js.LICENSE.txt": "/AShoful/testCodempire/static/js/2.2ac75d1e.chunk.js.LICENSE.txt"
+    "main.css": "/testCodempire/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/testCodempire/static/js/main.3f8544fd.chunk.js",
+    "main.js.map": "/testCodempire/static/js/main.3f8544fd.chunk.js.map",
+    "runtime-main.js": "/testCodempire/static/js/runtime-main.4e4c4a0d.js",
+    "runtime-main.js.map": "/testCodempire/static/js/runtime-main.4e4c4a0d.js.map",
+    "static/js/2.2ac75d1e.chunk.js": "/testCodempire/static/js/2.2ac75d1e.chunk.js",
+    "static/js/2.2ac75d1e.chunk.js.map": "/testCodempire/static/js/2.2ac75d1e.chunk.js.map",
+    "index.html": "/testCodempire/index.html",
+    "precache-manifest.7ea866ef40681fa6bcf972963b83f346.js": "/testCodempire/precache-manifest.7ea866ef40681fa6bcf972963b83f346.js",
+    "service-worker.js": "/testCodempire/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/testCodempire/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.2ac75d1e.chunk.js.LICENSE.txt": "/testCodempire/static/js/2.2ac75d1e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.135f4ad9.js",
+    "static/js/runtime-main.4e4c4a0d.js",
     "static/js/2.2ac75d1e.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.34a699b9.chunk.js"
+    "static/js/main.3f8544fd.chunk.js"
   ]
 }
