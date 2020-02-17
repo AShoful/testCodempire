@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { Switch, Route } from "react-router-dom";
 import Quiz from './Component/Ouiz'
 import Rezults from './Component/Rezults'
@@ -7,6 +8,13 @@ import Box from '@material-ui/core/Box'
 import { quiz } from './quiz'
 import { initialQuizState, isEmpty } from './function'
 import axios from 'axios'
+
+const theme = createMuiTheme({
+  typography: {
+    htmlFontSize: 16,
+    fontSize: 10
+    },
+  });
 
 function App() {
 
@@ -45,10 +53,13 @@ function App() {
       answers={answers}/>
   
   return  <Box className='App'>
+    <ThemeProvider theme={theme}>
     <Switch>
       <Route path="/" exact render={() => appQuiz} />
+      <Route path="/testCodempire" exact render={() => appQuiz} />
       <Route path="/rezults" render={() => appRezults} />
     </Switch>
+    </ThemeProvider>
   </Box>
 }
 export default App;

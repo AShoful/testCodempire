@@ -20,6 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,5 +48,8 @@
   "bugs": {
     "url": "https://github.com/AShoful/testCodempire/issues"
   },
-  "homepage": "https://github.com/AShoful/testCodempire#readme"
+  "homepage": "https://AShoful.github.io/testCodempire",
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }
