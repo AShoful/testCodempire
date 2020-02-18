@@ -31,8 +31,7 @@ function App() {
 
   useEffect(()=> {
 		axios.get('https://react-quiz-5cb66.firebaseio.com/testCodempire.json')
-    .then(res => Object.values(res.data)[0])
-    .then(res => handleSetQuzes(res))
+    .then(res => handleSetQuzes(res.data.value))
     .catch((e) => {
       console.log(e)
       handleSetQuzes(quiz)
