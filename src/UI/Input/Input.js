@@ -35,9 +35,11 @@ export default function Input({question, handleSetAnswer, i,
   startState, isDisabled}) {
   const classes = useStyles();
   const [value, setValue] = React.useState(startState ? startState : '');
-  
+  const [touch, setTouch] = React.useState(false)
+
   const handleChange = event => {
     setValue(event.target.value);
+    setTouch(true)
   };
   
   return <> 
@@ -53,7 +55,7 @@ export default function Input({question, handleSetAnswer, i,
           className={classes.input} 
           disabled={isDisabled}/>
       </form>
-      {!isDisabled ? 
+      {!isDisabled && touch ? 
         <Fab className={classes.add} 
           size={'small'} 
           color='primary' 

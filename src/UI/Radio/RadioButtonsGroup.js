@@ -32,9 +32,11 @@ export default function RadioButtonsGroup({question, handleSetAnswer, i, startSt
   const classes = useStyles();
   const [value, setValue] = React.useState(startState ? 
     question.answers[startState-1] : '');
+    const [touch, setTouch] = React.useState(false)  
 
   const handleChange = event => {
     setValue(event.target.value);
+    setTouch(true)
   };
   const rezult = (question.answers
     .findIndex(item => item === value) + 1).toString()
@@ -55,7 +57,7 @@ export default function RadioButtonsGroup({question, handleSetAnswer, i, startSt
             label={item} />)}
         </RadioGroup>
       </FormControl>
-      {!isDisabled ? 
+      {!isDisabled && touch ? 
       <Fab className={classes.add} 
         size={'small'} 
         color='primary' 

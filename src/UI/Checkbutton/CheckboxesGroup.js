@@ -37,9 +37,10 @@ export default function Checkboxes({question, i, handleSetAnswer,
   const classes = useStyles();
 
   const [state, setState] = React.useState(initialState(question.answers, 0, startState));
-
+  const [touch, setTouch] = React.useState(false)  
   const handleChange = name => event => {
     setState({ ...state, [name]: event.target.checked });
+    setTouch(true)
   };
   
   const keyState = Object.keys(state)
@@ -65,7 +66,7 @@ export default function Checkboxes({question, i, handleSetAnswer,
         />)}  
         </FormGroup>
       </FormControl>
-      {!isDisabled ? 
+      {!isDisabled && touch ? 
       <Fab className={classes.add} 
         size={'small'} 
         color='primary' 

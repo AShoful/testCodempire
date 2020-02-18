@@ -32,9 +32,11 @@ export default function ControlledOpenSelect({question, i,
   const classes = useStyles();
   const [value, setValue] = React.useState(startState ? startState : '');
   const [open, setOpen] = React.useState(false);
+  const [touch, setTouch] = React.useState(false)
 
   const handleChange = event => {
     setValue(event.target.value.toString());
+    setTouch(true)
   };
 
   const handleClose = () => {
@@ -66,7 +68,7 @@ export default function ControlledOpenSelect({question, i,
           )}
         </Select>
       </FormControl>
-      {!isDisabled ? 
+      {!isDisabled && touch ? 
         <Fab className={classes.add} 
           size={'small'} 
           color='primary'
