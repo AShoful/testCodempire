@@ -59,7 +59,7 @@ export default function Input({question, handleSetAnswer, i,
         <Fab className={classes.add} 
           size={'small'} 
           color='primary' 
-          onClick={() => handleSetAnswer(i, value.toLocaleLowerCase().trim()) }>
+          onClick={() => {handleSetAnswer(i, value.toLocaleLowerCase().trim()); setTouch(false)} }>
           + 
         </Fab> : null}
     </Box>

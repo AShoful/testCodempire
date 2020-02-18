@@ -70,7 +70,7 @@ export default function Checkboxes({question, i, handleSetAnswer,
       <Fab className={classes.add} 
         size={'small'} 
         color='primary' 
-        onClick={() => handleSetAnswer(i, rezult) }>+
+        onClick={() => {handleSetAnswer(i, rezult); setTouch(false)} }>+
       </Fab> : 
         null}      
       <Divider/>

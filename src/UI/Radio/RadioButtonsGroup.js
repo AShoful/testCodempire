@@ -61,7 +61,7 @@ export default function RadioButtonsGroup({question, handleSetAnswer, i, startSt
       <Fab className={classes.add} 
         size={'small'} 
         color='primary' 
-        onClick={() => handleSetAnswer(i, rezult)}>+
+        onClick={() => {handleSetAnswer(i, rezult); setTouch(false)}}>+
       </Fab> : null}
       <Divider />
     </Box>

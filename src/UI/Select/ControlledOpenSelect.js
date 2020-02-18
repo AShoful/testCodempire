@@ -72,7 +72,7 @@ export default function ControlledOpenSelect({question, i,
         <Fab className={classes.add} 
           size={'small'} 
           color='primary'
-          onClick={() => handleSetAnswer(i, value) }>
+          onClick={() => {handleSetAnswer(i, value); setTouch(false)} }>
             +
         </Fab> : null} 
       <Divider />
