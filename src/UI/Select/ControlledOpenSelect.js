@@ -8,35 +8,34 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Fab from '@material-ui/core/Fab';
 
-const useStyles = makeStyles(theme => ({
-  root:{
-    position:"relative",
-    paddingLeft: 20,
+const useStyles = makeStyles((theme) => ({
+  root: {
+    position: 'relative',
+    paddingLeft: 20
   },
   formControl: {
     margin: theme.spacing(3),
-    minWidth: 320,
+    minWidth: 320
   },
-  add:{
+  add: {
     position: 'absolute',
     right: 20,
     bottom: 20
   },
-  select:{
+  select: {
     minWidth: '300px'
   }
 }));
 
-export default function ControlledOpenSelect({question, i, 
-  handleSetAnswer, startState, isDisabled}) {
+export default function ControlledOpenSelect({ question, i, handleSetAnswer, startState, isDisabled }) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(startState ? startState : '');
+  const [value, setValue] = React.useState(startState || '');
   const [open, setOpen] = React.useState(false);
-  const [touch, setTouch] = React.useState(false)
+  const [touch, setTouch] = React.useState(false);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setValue(event.target.value.toString());
-    setTouch(true)
+    setTouch(true);
   };
 
   const handleClose = () => {
@@ -46,35 +45,43 @@ export default function ControlledOpenSelect({question, i,
   const handleOpen = () => {
     setOpen(true);
   };
-  
+
   return (
     <Box className={classes.root}>
-      <Typography variant="h6" color='primary'>
-        {question.question} 
+      <Typography variant="h6" color="primary">
+        {question.question}
       </Typography>
-      <FormControl className={classes.formControl} 
-        disabled={isDisabled}>
-        <Select className={classes.select}
+      <FormControl className={classes.formControl} disabled={isDisabled}>
+        <Select
+          className={classes.select}
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
           value={value}
           onChange={handleChange}
         >
-          {question.answers.map((item, i) => 
-            <MenuItem  
-              value={i+1} 
-              key={i}> {i+1} {item}</MenuItem>
-          )}
+          {question.answers.map((item, i) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <MenuItem value={i + 1} key={i}>
+              {' '}
+              {i + 1} {item}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
-      {!isDisabled && touch ? 
-        <Fab className={classes.add} 
-          size={'small'} 
-          color='primary'
-          onClick={() => {handleSetAnswer(i, value); setTouch(false)} }>
-            +
-        </Fab> : null} 
+      {!isDisabled && touch ? (
+        <Fab
+          className={classes.add}
+          size="small"
+          color="primary"
+          onClick={() => {
+            handleSetAnswer(i, value);
+            setTouch(false);
+          }}
+        >
+          +
+        </Fab>
+      ) : null}
       <Divider />
     </Box>
   );
